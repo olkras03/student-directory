@@ -22,7 +22,7 @@ end
 
 def print(students)
     index = 0
-    while students.length > index
+    until index >= students.length
         puts "#{index + 1} #{students[index][:name]} (#{students[index][:cohort]} cohort)"
     index += 1
     end 
