@@ -20,9 +20,9 @@ def print_header
     puts "--------------"
 end 
 
-def select_names_starting_with(students)
+def print(students)
     students.each_with_index do |student, index| 
-        if student[:name].chars.first == "S"
+        if student[:name].length < 12
         puts "#{index + 1} #{student[:name]} (#{student[:cohort]} cohort)"
         end 
     end 
@@ -34,6 +34,6 @@ end
 
 students = input_students
 print_header
-select_names_starting_with(students)
+print(students)
 print_footer(students)
 
